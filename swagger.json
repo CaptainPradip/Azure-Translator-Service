@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Text Translator API",
-    "description": "This API allows you to translate text from one language to another.",
+    "description": "This API allows you to translate text from one language to another.\n This API uses Basic Authentication. Kindly Authorize this API Using provided client id and Secret. If you don't have client id and secret, please send request to pnemane@uncc.edu.",
     "version": "1.0"
   },
   "servers": [
