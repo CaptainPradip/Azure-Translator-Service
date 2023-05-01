@@ -15,8 +15,7 @@ To use this API, you will need the following:
 
 * An Translate Text API service. You can get a more information about the API request  for the http://159.65.162.167:3005/translator-api-docs.
 
-You need the key and endpoint from the resource to connect your application to the Translator service. Later, you paste your key and endpoint into the config file.
-
+You need the client id, secret and endpoint from the resource to connect your application to the Translator service. 
 The API will be running at `http://159.65.162.167:3005/api/v1/translate`.
 
 ### Usage
@@ -63,11 +62,12 @@ Authorization: Basic YOUR_API_KEY_HERE
 ```
  ## Working of Text Translator API 
 
- The Translator Service API is a cloud-based neural machine translation service that is part of the Azure Cognitive Services family of REST APIs. It can be used with any operating system and powers many Microsoft products and services, as well as thousands of businesses worldwide, for language translation and other language-related operations.
+ The Translator Service API acts as a wrapper over the Azure Translator Service and enables developers to easily access its capabilities. By using this API, developers can build intelligent, multi-language solutions for their applications across all supported languages.
 
-This API acts as a wrapper over the Translator Service and enables developers to easily access its capabilities. By using this API, developers can build intelligent, multi-language solutions for their applications across all supported languages.
-
-With Translator Service API, users can easily translate text from one language to another, detect the language of a given piece of text, and obtain a list of supported languages. The API also offers advanced features such as customization of translation models and automatic language detection.
+With Translator Service API, users can 
+- easily translate text from one language to another, 
+- detect the language of a given piece of text, and 
+- obtain a list of supported languages.
 
 ## Text Translator API Details
 The API is available at http://159.65.162.167:3005/api/v1/
@@ -103,39 +103,24 @@ Example Authorization Header:
 
 
  **Sample Request:**
- <img width="1310" alt="image" src="https://user-images.githubusercontent.com/24209468/235454045-37ae6fcc-8df8-4884-a0ae-dd44b763d953.png">
 
 ```
 {
-    "text": "I would really like to drive your car around the block a few times!",
-    "from": "en",
-    "to": [
-        "ar",
-        "bn",
-        "cs",
-        "de",
-        "es",
-        "fr",
-        "hi",
-        "id",
-        "it",
-        "ja",
-        "ko",
-        "ms",
-        "nl",
-        "pt",
-        "ru",
-        "th",
-        "tr",
-        "uk",
-        "ur",
-        "vi",
-        "zh-Hans",
-        "zh-Hant",
-        "zu"
-    ]
+  "translations": [
+    {
+      "text": "¡Hola mundo!",
+      "to": "es"
+    },
+    {
+      "text": "Bonjour le monde!",
+      "to": "fr"
+    },
+    {
+      "text": "Hallo Welt!",
+      "to": "de"
+    }
+  ]
 }
-
 
 ```
  **Translator language support**
@@ -200,7 +185,6 @@ Example Authorization Header:
 | 401 Unauthorized | Indicates that either Authorization header is missing or invalid token is sent|
 
 **Sample Response:**
-<img width="1310" alt="image" src="https://user-images.githubusercontent.com/24209468/235454335-f9c167e7-09af-4ddc-9470-d24c778bc6de.png">
 
 ```
 {
@@ -309,11 +293,13 @@ You can create your own request by following the API [specification](http://159.
 
 Steps to send request to API:
  1. Download [POSTMAN Collection](https://github.com/CaptainPradip/Azure-Translator-Service/blob/main/Translator%20Service.postman_collection.json)
- 3. In postman select import the downloaded collection. If you're unfamiliar with importing collections into the postman, follow [this guide](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/#importing-data-into-postman)
- 4. Open the Translator Service request. Add Basic Authentication, refer API Authentication section.
- 5. Navigate to Body -> raw
+ 2. In postman select import the downloaded collection. If you're unfamiliar with importing collections into the postman, follow [this guide](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/#importing-data-into-postman)
+ 3. Open the Translator Service request. Add Basic Authentication, refer API Authentication section.
+ 4. Navigate to Body -> raw
+   <img width="1310" alt="image" src="https://user-images.githubusercontent.com/24209468/235454045-37ae6fcc-8df8-4884-a0ae-dd44b763d953.png">
+ 5. Hit the Send button to send request to API. For valid requests, API returns requested information about translation object will contain the translated text and the target language code.
  
- 6. Hit the Send button to send request to API. For valid requests, API returns requested information about translation object will contain the translated text and the target language code.
+ <img width="1310" alt="image" src="https://user-images.githubusercontent.com/24209468/235454335-f9c167e7-09af-4ddc-9470-d24c778bc6de.png">
 ## Built With
 
 * [Node.js](https://nodejs.org/) - A JavaScript runtime built on Chrome's V8 JavaScript engine.
