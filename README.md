@@ -332,7 +332,7 @@ To see how API works, by sending requests to it.
 You can create your own request by following the API [specification](http://159.65.162.167:3005/translator-api-docs) or you can simply import below collection into postman and send request to API.
 
 Steps to send request to API:
- 1. Download .[POSTMAN Collection] (https://github.com/CaptainPradip/Azure-Translator-Service/blob/main/Translator%20Service.postman_collection.json)
+ 1. Download [POSTMAN Collection](https://github.com/CaptainPradip/Azure-Translator-Service/blob/main/Translator%20Service.postman_collection.json)
  3. In postman select import the downloaded collection. If you're unfamiliar with importing collections into the postman, follow [this guide](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/#importing-data-into-postman)
  4. Open the Translator Service request. Add Basic Authentication, refer API Authentication section.
  5. Navigate to Body -> raw
