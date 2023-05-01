@@ -122,6 +122,7 @@ Example:
 
  
  Alternatively, In postman basic token can be added in Authorization as below:
+<img width="1310" alt="image" src="https://user-images.githubusercontent.com/24209468/235453837-9e865baa-ea9b-4c3c-811a-32816910c21c.png">
 
 
  **Sample Request:**
