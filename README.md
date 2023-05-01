@@ -168,7 +168,6 @@ Steps to send request to API:
  2. In postman select import the downloaded collection. If you're unfamiliar with importing collections into the postman, follow [this guide](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/#importing-data-into-postman)
  3. Open the Translator Service request. Add Basic Authentication, refer API Authentication section.
  4. Navigate to Body -> raw
- 5. 
    <img width="1310" alt="image" src="https://user-images.githubusercontent.com/24209468/235490942-7f1bf7e4-0acc-465e-86be-a56dff368db8.png">
 
  5. Hit the Send button to send request to API. For valid requests, API returns requested information about translation object will contain the translated text and the target language code.
