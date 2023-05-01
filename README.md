@@ -122,10 +122,13 @@ Example:
 
  
  Alternatively, In postman basic token can be added in Authorization as below:
-<img width="1310" alt="image" src="https://user-images.githubusercontent.com/24209468/235453837-9e865baa-ea9b-4c3c-811a-32816910c21c.png">
+<img width="1310" alt="image" src="https://user-images.githubusercontent.com/24209468/235453957-debbd1a0-de5e-4649-b9b9-4f1132cb138e.png">
+
 
 
  **Sample Request:**
+ <img width="1310" alt="image" src="https://user-images.githubusercontent.com/24209468/235454045-37ae6fcc-8df8-4884-a0ae-dd44b763d953.png">
+
 ```
 {
     "text": "I would really like to drive your car around the block a few times!",
@@ -221,6 +224,8 @@ Example:
 | 401 Unauthorized | Indicates that either Authorization header is missing or invalid token is sent|
 
 **Sample Response:**
+<img width="1310" alt="image" src="https://user-images.githubusercontent.com/24209468/235454335-f9c167e7-09af-4ddc-9470-d24c778bc6de.png">
+
 ```
 {
     "translations": [
