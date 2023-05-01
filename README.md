@@ -66,7 +66,9 @@ Example Authorization Header:
 
  
  Alternatively, In postman basic token can be added in Authorization as below:
-<img width="1310" alt="image" src="https://user-images.githubusercontent.com/24209468/235453957-debbd1a0-de5e-4649-b9b9-4f1132cb138e.png">
+ 
+<img width="1310" alt="image" src="https://user-images.githubusercontent.com/24209468/235490747-6096c36f-5add-40e7-a9d3-fae78d3b6e0c.png">
+
 
 ### API Response
 The response will be a JSON object containing an array of translation objects, one for each target language. Each translation object will contain the translated text and the target language code. Here is an example response:
