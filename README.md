@@ -157,7 +157,7 @@ The response will be a JSON object containing an array of translation objects, o
 
 
 ## Start using the API:
-To see how API works, by sending requests to it. 
+To see how API works, start sending requests to it. 
 
 You can create your own request by following the API [specification](http://159.65.162.167:3005/translator-api-docs) or you can simply import below collection into postman and send request to API.
 
