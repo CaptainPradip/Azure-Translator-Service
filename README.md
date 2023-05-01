@@ -12,50 +12,14 @@ The Translate Text API supports a wide range of languages and dialects, making i
 ## Getting Started
 
 To use this API, you will need the following:
-
-* An Translate Text API service. You can get a more information about the API request  for the http://159.65.162.167:3005/translator-api-docs.
-
-You need the client id, secret and endpoint from the resource to connect your application to the Translator service. 
-The API will be running at `http://159.65.162.167:3005/api/v1/translate`.
-
-### Usage
-
-To use the API, send a POST request to the `/translate` endpoint with a JSON payload containing the text to be translated, the source language, and the target languages. Here is an example request:
-
-```json
-{
-  "text": "Hello, world!",
-  "from": "en",
-  "to": ["es", "fr", "de"]
-}
-```
-
-This will translate the text "Hello, world!" from English (`en`) to Spanish (`es`), French (`fr`), and German (`de`).
-
-The response will be a JSON object containing an array of translation objects, one for each target language. Each translation object will contain the translated text and the target language code. Here is an example response:
-
-```json
-{
-  "translations": [
-    {
-      "text": "¡Hola mundo!",
-      "to": "es"
-    },
-    {
-      "text": "Bonjour le monde!",
-      "to": "fr"
-    },
-    {
-      "text": "Hallo Welt!",
-      "to": "de"
-    }
-  ]
-}
-```
+To use this API, you will need the following:
+- An Translate Text API service. The API is running at http://159.65.162.167:3005/api/v1/translate.
+- the client id, secret
+* This document provides details of the API and how to use it. You can get a more technical information about the API here: http://159.65.162.167:3005/translator-api-docs.
 
 ### Authentication
 
-This API uses HTTP Basic authentication. To authenticate, include your Text Translator API key as the username in the request header. For example:
+This API uses HTTP Basic authentication. To authenticate, include your Text Translator client-id key as the username and client secret in the request header. For example:
 
 ```
 Authorization: Basic YOUR_API_KEY_HERE
@@ -71,7 +35,10 @@ With Translator Service API, users can
 
 ## Text Translator API Details
 The API is available at http://159.65.162.167:3005/api/v1/
- ### Endpoint: **`POST /translate`**
+ ## Endpoint: **`POST /translate`**
+ 
+ ### API Request
+To use the API, send a POST request to the `/translate` endpoint with a JSON payload containing the text to be translated, the source language, and the target languages. Here is an example request:
 
 **Payload**
 
@@ -82,6 +49,7 @@ The API is available at http://159.65.162.167:3005/api/v1/
   "to": ["es", "fr", "de"]
 }
 ```
+This will translate the text "Hello, world!" from English (`en`) to Spanish (`es`), French (`fr`), and German (`de`).
 
 | Name        | Type    | In    | Required | Description                                                                                                                                          |
 | ----------- | ------- | ----- | -------- | --------------------------------------------------------------------- |
@@ -89,7 +57,7 @@ The API is available at http://159.65.162.167:3005/api/v1/
 | `from`   | string | body  | yes      | The language code of the source language. Defaults to 'en' if not specified.|
 | `to`   | string array | body  | yes      | The language codes of the target languages. ex .["fr", "zu"] |
 
-## API Authentication
+### API Authentication
 The API require a basic authentication token sent in the `Authorization` header. Basic API token can be generated using client_id, client_secret provided.
 
 Example Authorization Header:
@@ -100,26 +68,25 @@ Example Authorization Header:
  Alternatively, In postman basic token can be added in Authorization as below:
 <img width="1310" alt="image" src="https://user-images.githubusercontent.com/24209468/235453957-debbd1a0-de5e-4649-b9b9-4f1132cb138e.png">
 
-
-
- **Sample Request:**
+### API Response
+The response will be a JSON object containing an array of translation objects, one for each target language. Each translation object will contain the translated text and the target language code. Here is an example response:
 
 ```
 {
-  "translations": [
-    {
-      "text": "¡Hola mundo!",
-      "to": "es"
-    },
-    {
-      "text": "Bonjour le monde!",
-      "to": "fr"
-    },
-    {
-      "text": "Hallo Welt!",
-      "to": "de"
-    }
-  ]
+    "translations": [
+        {
+            "text": "¡Hola mundo!",
+            "to": "es"
+        },
+        {
+            "text": "Salut tout le monde!",
+            "to": "fr"
+        },
+        {
+            "text": "Hallo Welt!",
+            "to": "de"
+        }
+    ]
 }
 
 ```
@@ -184,107 +151,7 @@ Example Authorization Header:
 | 400 Bad Request  | The target language ('To' field), ('From' field)  is missing or invalid. |
 | 401 Unauthorized | Indicates that either Authorization header is missing or invalid token is sent|
 
-**Sample Response:**
 
-```
-{
-    "translations": [
-        {
-            "text": "أود حقا قيادة سيارتك حول الكتلة عدة مرات!",
-            "to": "ar"
-        },
-        {
-            "text": "আমি সত্যিই কয়েকবার ব্লকের চারপাশে আপনার গাড়ি চালাতে চাই!",
-            "to": "bn"
-        },
-        {
-            "text": "Opravdu bych chtěl projet vaše auto kolem bloku několikrát!",
-            "to": "cs"
-        },
-        {
-            "text": "Ich würde wirklich gerne ein paar Mal mit Ihrem Auto um den Block fahren!",
-            "to": "de"
-        },
-        {
-            "text": "¡Realmente me gustaría conducir su automóvil alrededor de la cuadra varias veces!",
-            "to": "es"
-        },
-        {
-            "text": "J’aimerais vraiment conduire votre voiture autour du pâté de maisons plusieurs fois!",
-            "to": "fr"
-        },
-        {
-            "text": "मैं वास्तव में कुछ बार ब्लॉक के चारों ओर अपनी कार चलाना चाहता हूं!",
-            "to": "hi"
-        },
-        {
-            "text": "Saya benar-benar ingin mengendarai mobil Anda di sekitar blok beberapa kali!",
-            "to": "id"
-        },
-        {
-            "text": "Mi piacerebbe davvero guidare la tua auto intorno all'isolato un paio di volte!",
-            "to": "it"
-        },
-        {
-            "text": "私は本当にあなたの車をブロックの周りを数回運転したいと思います!",
-            "to": "ja"
-        },
-        {
-            "text": "나는 정말로 당신의 차를 몇 번 블록 주위로 운전하고 싶습니다!",
-            "to": "ko"
-        },
-        {
-            "text": "Saya benar-benar ingin memandu kereta anda di sekitar blok beberapa kali!",
-            "to": "ms"
-        },
-        {
-            "text": "Ik zou heel graag een paar keer met je auto een blokje om willen rijden!",
-            "to": "nl"
-        },
-        {
-            "text": "Eu realmente gostaria de dirigir seu carro ao redor do quarteirão algumas vezes!",
-            "to": "pt"
-        },
-        {
-            "text": "Мне бы очень хотелось несколько раз прокатиться на вашей машине по кварталу!",
-            "to": "ru"
-        },
-        {
-            "text": "ฉันอยากจะขับรถของคุณไปรอบ ๆ บล็อกสองสามครั้ง!",
-            "to": "th"
-        },
-        {
-            "text": "Arabanızı bloğun etrafında birkaç kez sürmek istiyorum!",
-            "to": "tr"
-        },
-        {
-            "text": "Мені б дуже хотілося кілька разів проїхати на вашому автомобілі по кварталу!",
-            "to": "uk"
-        },
-        {
-            "text": "میں واقعی آپ کی گاڑی کو بلاک کے ارد گرد چند بار چلانا چاہتا ہوں!",
-            "to": "ur"
-        },
-        {
-            "text": "Tôi thực sự muốn lái xe của bạn xung quanh khối một vài lần!",
-            "to": "vi"
-        },
-        {
-            "text": "我真的很想开你的车绕街区转几次！",
-            "to": "zh-Hans"
-        },
-        {
-            "text": "我真的很想開你的車繞街區轉幾次！",
-            "to": "zh-Hant"
-        },
-        {
-            "text": "Ngingathanda ngempela ukushayela imoto yakho emhlabeni block izikhathi ezimbalwa!",
-            "to": "zu"
-        }
-    ]
-}
-
-```
 
 ## Start using the API:
 To see how API works, by sending requests to it. 
