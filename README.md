@@ -55,7 +55,7 @@ This will translate the text "Hello, world!" from English (`en`) to Spanish (`es
 | ----------- | ------- | ----- | -------- | --------------------------------------------------------------------- |
 | `text`  | string  | body | yes       | The text to be translated. |
 | `from`   | string | body  | yes      | The language code of the source language. Defaults to 'en' if not specified.|
-| `to`   | string array | body  | yes      | The language codes of the target languages. ex .["fr", "zu"] |
+| `to`   | string array | body  | yes      | The language codes of the target languages. ex . ["es", "fr", "de"] |
 
 ### API Authentication
 The API require a basic authentication token sent in the `Authorization` header. Basic API token can be generated using client_id, client_secret provided.
