@@ -92,6 +92,7 @@ The response will be a JSON object containing an array of translation objects, o
 ```
 
  **Translator language support**. 
+ 
  Translator API supports below languages. You can use their corresponding codes while sending request to it.
  | Language | Code |
 |---------|------|
