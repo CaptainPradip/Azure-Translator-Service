@@ -105,7 +105,14 @@ With Translator Service API, users can easily translate text from one language t
 The API is available at http://159.65.162.167:3005/api/v1/
  ### Endpoint: **`POST /translate`**
 
-**Parameters**
+**Payload**
+```json
+{
+  "text": "Hello, world!",
+  "from": "en",
+  "to": ["es", "fr", "de"]
+}
+```
 
 | Name        | Type    | In    | Required | Description                                                                                                                                          |
 | ----------- | ------- | ----- | -------- | --------------------------------------------------------------------- |
