@@ -7,7 +7,7 @@ const supportedLanguages = [
     "et", "fi", "fr", "de", "el", "ht", "he", "hi", "mww", "hu", "id", "it", "ja",
     "sw", "tlh", "tlh-Qaak", "ko", "lv", "lt", "ms", "mt", "nb", "fa", "pl", "pt",
     "ro", "ru", "sm", "sr-Cyrl", "sr-Latn", "sk", "sl", "es", "sv", "ty", "ta", "te",
-    "th", "to", "tr", "uk", "ur", "vi", "cy", "yua"
+    "th", "to", "tr", "uk", "ur", "vi", "cy", "yua","zu"
 ];
 
 const validateLanguages = function validateLanguages(to) {
