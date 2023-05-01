@@ -11,8 +11,6 @@ The Translate Text API supports a wide range of languages and dialects, making i
 
 ## Getting Started
 
-### Prerequisites
-
 To use this API, you will need the following:
 
 * An Translate Text API service. You can get a more information about the API request  for the http://159.65.162.167:3005/translator-api-docs.
