@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "b6527310-b5f3-4d9c-b2d7-a888d2e1cc5a",
+		"name": "Translator Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://159.65.162.167:3005/api/v1/translate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Y2FwdGFpbjpqYWNr",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"I would really like to drive your car around the block a few times!\",\n    \"from\": \"en\",\n    \"to\": [\n        \"ar\",\n        \"bn\",\n        \"cs\",\n        \"de\",\n        \"es\",\n        \"fr\",\n        \"hi\",\n        \"id\",\n        \"it\",\n        \"ja\",\n        \"ko\",\n        \"ms\",\n        \"nl\",\n        \"pt\",\n        \"ru\",\n        \"th\",\n        \"tr\",\n        \"uk\",\n        \"ur\",\n        \"vi\",\n        \"zh-Hans\",\n        \"zh-Hant\",\n        \"zu\"\n    ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://159.65.162.167:3005/api/v1/translate",
+					"protocol": "http",
+					"host": [
+						"159",
+						"65",
+						"162",
+						"167"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"v1",
+						"translate"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "captain",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "jack",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
