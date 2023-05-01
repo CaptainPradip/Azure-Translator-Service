@@ -4,10 +4,10 @@ const { API_KEY, API_URL, LOCATION, USER_CREDENTIALS } = require('../config/conf
 
 const supportedLanguages = [
     "ar", "bs", "bg", "ca", "zh-Hans", "zh-Hant", "hr", "cs", "da", "nl", "en",
-    "et", "fi", "fr", "de", "el", "ht", "he", "hi", "mww", "hu", "id", "it", "ja",
-    "sw", "tlh", "tlh-Qaak", "ko", "lv", "lt", "ms", "mt", "nb", "fa", "pl", "pt",
+    "et", "fi","fr", "de", "el", "ht", "he", "hi", "mww", "hu", "id", "it", "ja",
+    "sw", "tlh", "tlh-Qaak", "ko", "lv", "lt", "ms", "mt","no", "nb","otq", "fa", "pl", "pt",
     "ro", "ru", "sm", "sr-Cyrl", "sr-Latn", "sk", "sl", "es", "sv", "ty", "ta", "te",
-    "th", "to", "tr", "uk", "ur", "vi", "cy", "yua", "zu","bn"
+    "th", "to","te", "tr", "uk", "ur", "vi", "cy", "yua", "zu","bn"
 ];
 
 const validateLanguages = function validateLanguages(to) {
