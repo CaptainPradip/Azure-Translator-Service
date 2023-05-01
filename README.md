@@ -17,37 +17,7 @@ To use this API, you will need the following:
 
 * An Translate Text API service. You can get a more information about the API request  for the http://159.65.162.167:3005/translator-api-docs.
 
-* An HTTP client (e.g., [Postman](https://www.postman.com/) or [curl](https://curl.se/)) to send requests to the API.
-* To Run Application in Local below You need the API KEY and LOCATION follow below steps to get it 
-
-1.  Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/)
-
-2. A Cognitive Services or Translator resource. Once you have your Azure subscription, create a single-service or a multi-service resource, in the Azure portal, to get your key and endpoint. After it deploys, select Go to resource.
-
-3. You can use the free pricing tier (F0) to try the service, and upgrade later to a paid tier for production.
-
 You need the key and endpoint from the resource to connect your application to the Translator service. Later, you paste your key and endpoint into the config file.
-### Installing
-
-To get started with the API, you can clone this repository to your local machine:
-
-```bash
-git clone https://github.com/CaptainPradip/Azure-Translator-Service.git
-```
-
-Then, navigate to the root directory of the project and install the dependencies:
-
-```bash
-cd Azure-Translator-Service
-npm install
-```
-update the API KEY and LOCATION from the Azure in config file
-
-Finally, start the server:
-
-```bash
-npm start
-```
 
 The API will be running at `http://159.65.162.167:3005/api/v1/translate`.
 
@@ -106,6 +76,7 @@ The API is available at http://159.65.162.167:3005/api/v1/
  ### Endpoint: **`POST /translate`**
 
 **Payload**
+
 ```json
 {
   "text": "Hello, world!",
@@ -123,7 +94,7 @@ The API is available at http://159.65.162.167:3005/api/v1/
 ## API Authentication
 The API require a basic authentication token sent in the `Authorization` header. Basic API token can be generated using client_id, client_secret provided.
 
-Example:
+Example Authorization Header:
 
 `Authorization: Basic YOUR_TOKEN`
 
