@@ -40,7 +40,7 @@ The API is available at http://159.65.162.167:3005/api/v1/
  ### API Request
 To use the API, send a POST request to the `/translate` endpoint with a JSON payload containing the text to be translated, the source language, and the target languages. Here is an example request:
 
-**Payload**
+**Sample Payload**
 
 ```json
 {
@@ -90,7 +90,9 @@ The response will be a JSON object containing an array of translation objects, o
 }
 
 ```
+
  **Translator language support**
+ Translator API supports below languages. You can use their corresponding codes while sending request to it.
  | Language | Code |
 |---------|------|
 | Arabic | ar |
